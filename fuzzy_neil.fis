@@ -1,0 +1,79 @@
+[System]
+Name='fuzzy_neil'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=3
+NumRules=4
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Temperature'
+Range=[0 100]
+NumMFs=5
+MF1='Cold':'gaussmf',[9.236 1.208]
+MF2='Warm':'gaussmf',[6.857 31.63]
+MF3='Hot/OPTIMAL':'gaussmf',[2.218 48.55]
+MF4='TooHot':'gaussmf',[8.07220052323311 80]
+MF5='VeryHot':'gaussmf',[2.83684816382189 56.2]
+
+[Input2]
+Name='WaterSoftness'
+Range=[0 200]
+NumMFs=5
+MF1='Soft/OPTIMAL':'gaussmf',[7.323 0.9581]
+MF2='SlightlySoft':'gaussmf',[11.110651287886 37.2]
+MF3='SlightlyHard':'gaussmf',[16.49 90.09]
+MF4='Hard':'gaussmf',[15.4 150]
+MF5='VeryHard':'gaussmf',[7.6187970836132 190]
+
+[Input3]
+Name='WaterPressure'
+Range=[0 200]
+NumMFs=3
+MF1='Low':'gaussmf',[11.214448289599 1]
+MF2='Moderate/OPTIMAL':'gaussmf',[22.8244101153665 65.5]
+MF3='High':'gaussmf',[21.8119440417152 160]
+
+[Input4]
+Name='Dirtiness'
+Range=[0 100]
+NumMFs=3
+MF1='Clean':'gaussmf',[3.822 0.5]
+MF2='SlightlyDirty':'gaussmf',[8.31914346802612 25]
+MF3='Dirty':'gaussmf',[16.14 61]
+
+[Output1]
+Name='PumpSpinChange'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.4 0 0.4]
+MF2='mf2':'trimf',[0.1 0.5 0.9]
+MF3='mf3':'trimf',[0.6 1 1.4]
+
+[Output2]
+Name='DetergentLevel'
+Range=[0 10]
+NumMFs=4
+MF1='SlightIncrease':'trimf',[0 0 2.5]
+MF2='VeryLargeIncrease':'trapmf',[6.78 8.04 9.28 10.6053384175405]
+MF3='LargeIncrease':'trapmf',[4.01 5.31 6.72 8.02192564346997]
+MF4='ModerateIncrease':'trapmf',[0.996186844613917 2.49 3.88 5.36]
+
+[Output3]
+Name='HeatingChange'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.4 0 0.4]
+MF2='mf2':'trimf',[0.1 0.5 0.9]
+MF3='mf3':'trimf',[0.6 1 1.4]
+
+[Rules]
+3 2 0 0, 0 1 0 (1) : 1
+3 3 0 0, 0 4 0 (1) : 1
+3 4 0 0, 0 3 0 (1) : 1
+3 5 0 0, 0 2 0 (1) : 1
