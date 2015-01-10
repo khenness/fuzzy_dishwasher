@@ -4,7 +4,7 @@ Type='mamdani'
 Version=2.0
 NumInputs=4
 NumOutputs=2
-NumRules=23
+NumRules=24
 AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
@@ -33,8 +33,8 @@ MF3='High':'gaussmf',[21.8119440417152 160]
 Name='Dirtiness'
 Range=[0 100]
 NumMFs=3
-MF1='Clean':'gaussmf',[5.24 -0.0408172706245189]
-MF2='SlightlyDirty':'gaussmf',[8.31914346802612 25]
+MF1='Clean':'gaussmf',[13.4036065932446 -0.0408]
+MF2='SlightlyDirty':'gaussmf',[6.06658428777157 25]
 MF3='Dirty':'gaussmf',[16.14 61]
 
 [Input4]
@@ -64,10 +64,10 @@ MF4='SlightDecrease':'trapmf',[-8.03 -3.67 -0.971 -0.3547]
 MF5='SlightIncrease':'trapmf',[0.432 1.06 3.89 7.957]
 
 [Rules]
-5 0 0 0, 0 4 (1) : 1
-4 0 0 0, 0 1 (1) : 1
-2 0 0 0, 0 5 (1) : 1
-1 0 0 0, 0 3 (1) : 1
+5 0 -1 0, 0 4 (1) : 1
+4 0 -1 0, 0 1 (1) : 1
+2 0 -1 0, 0 5 (1) : 1
+1 0 -1 0, 0 3 (1) : 1
 0 0 1 0, 1 1 (1) : 1
 0 1 2 1, 3 0 (1) : 1
 0 1 2 2, 3 0 (1) : 1
@@ -87,3 +87,4 @@ MF5='SlightIncrease':'trapmf',[0.432 1.06 3.89 7.957]
 0 3 3 1, 2 0 (1) : 1
 0 3 3 2, 2 0 (1) : 1
 0 3 3 0, 1 0 (1) : 1
+5 0 0 0, 0 4 (1) : 1
