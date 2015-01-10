@@ -47,21 +47,21 @@ MF3='High':'gaussmf',[3.83613749194993 34.7]
 
 [Output1]
 Name='PumpSpinChange'
-Range=[-1 1]
+Range=[-10 10]
 NumMFs=3
-MF1='Decrease':'trimf',[-1.8 -1 -0.2]
-MF2='NoChange':'trimf',[-0.8544 -0.0444 0.8444]
-MF3='Increase':'trimf',[0.2 1 1.8]
+MF1='Decrease':'trimf',[-18 -10 -2]
+MF2='NoChange':'trimf',[-8.544 -0.444 8.444]
+MF3='Increase':'trimf',[2 10 18]
 
 [Output2]
 Name='HeatingChange'
-Range=[-1 1]
+Range=[-10 10]
 NumMFs=5
-MF1='Decrease':'trapmf',[-1.72 -1.08 -0.710871241326137 -0.28]
-MF2='NoChange':'trimf',[-0.07710100231303 0 0.0863]
-MF3='Increase':'trapmf',[0.279 0.695451040863531 1.08 1.72]
-MF4='SlightDecrease':'trapmf',[-0.803 -0.367 -0.0971 -0.0354664610639938]
-MF5='SlightIncrease':'trapmf',[0.0432 0.106 0.389 0.79568234387047]
+MF1='Decrease':'trapmf',[-17.2 -10.8 -7.109 -2.8]
+MF2='NoChange':'trimf',[-0.771 0 0.863]
+MF3='Increase':'trapmf',[2.79 6.955 10.8 17.2]
+MF4='SlightDecrease':'trapmf',[-8.03 -3.67 -0.971 -0.3547]
+MF5='SlightIncrease':'trapmf',[0.432 1.06 3.89 7.957]
 
 [Rules]
 5 0 0 0, 0 4 (1) : 1
