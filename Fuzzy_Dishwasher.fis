@@ -4,7 +4,7 @@ Type='mamdani'
 Version=2.0
 NumInputs=4
 NumOutputs=2
-NumRules=24
+NumRules=25
 AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
@@ -15,7 +15,7 @@ DefuzzMethod='centroid'
 Name='Temperature'
 Range=[0 100]
 NumMFs=5
-MF1='Cold':'gaussmf',[9.236 1.208]
+MF1='Cold':'gaussmf',[9.237 1.208]
 MF2='Warm':'gaussmf',[6.857 31.63]
 MF3='Hot/OPTIMAL':'gaussmf',[2.218 48.55]
 MF4='TooHot':'gaussmf',[8.07220052323311 80]
@@ -88,3 +88,4 @@ MF5='SlightIncrease':'trapmf',[0.432 1.06 3.89 7.957]
 0 3 3 2, 2 0 (1) : 1
 0 3 3 0, 1 0 (1) : 1
 5 0 0 0, 0 4 (1) : 1
+1 0 1 0, 0 2 (1) : 1
